@@ -2,16 +2,19 @@
   import content from "./components/content/content.vue"
   import visualisator from "./components/visualisator/visualisator.vue"
   import headerC from "./components/header/header.vue"
+  import footerC from "./components/footer/footer.vue"
 </script>
 
 <template>
     <div class="background">
-      <img src="" alt="background image">
+      <div class="filter"></div>
+      <img src="./assets/images/back.jpg" alt="background image">
     </div>
     <headerC/>
     <div class="content">
       <content/>
     </div>
+    <footerC/>
 </template>
 
 <style>
@@ -25,11 +28,27 @@
 body{
   height: 100vh;
   width: 100vw;
+  background-color: var(--back-main-color);
+  overflow-x: hidden;
 }
 #app {
   height: 100%;
   width: 100%;
-  background-color: var(--back-main-color);
+}
+.background{
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+}
+.filter{
+  position: absolute;
+  background: rgba(19, 18, 18, 0.233);
+  height: 100%;
+  width: 100%;
+}
+.background>img{
+  width: 100vw;
 }
 .content {
   display: flex;

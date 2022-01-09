@@ -6,7 +6,7 @@
 
 <style scoped>
     .container {
-        height: 25%;
+        height: 33%;
         width: 100%;
         border: 1px solid white;
     }

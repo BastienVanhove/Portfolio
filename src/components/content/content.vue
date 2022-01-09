@@ -9,8 +9,8 @@
 <style scoped>
 
     .container{
-        width: 80%;
-        height: 100%;
+        width: 60%;
+        height: 200vh;
         background-color: red;
     }
 </style>
