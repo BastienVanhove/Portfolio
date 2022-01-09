@@ -6,8 +6,9 @@
 
 <style scoped>
     .container {
-        height: 33%;
+        margin-top: 20px;
+        height: 250px;
         width: 100%;
-        border: 1px solid white;
+        background-color: var(--style-color);
     }
 </style>
