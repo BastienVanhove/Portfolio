@@ -1,10 +1,11 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+<script lang="ts" setup>
+  import content from "./components/content/content.vue"
+  import visualisator from "./components/visualisator/visualisator.vue"
 </script>
 
 <template>
-  
+    <content/>
+    <visualisator/>
 </template>
 
 <style>
@@ -23,5 +24,6 @@ body{
   height: 100%;
   width: 100%;
   background-color: var(--back-main-color);
+  display: flex;
 }
 </style>
