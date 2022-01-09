@@ -1,14 +1,13 @@
 <script lang="ts" setup>
   import content from "./components/content/content.vue"
-  import visualisator from "./components/visualisator/visualisator.vue"
-  import footerC from "./components/footer/footer.vue"
+  import navbarC from "./components/navbar/navbar.vue"
 </script>
 
 <template>
+    <navbarC/>
     <div class="content">
       <content/>
     </div>
-    <footerC/>
 </template>
 
 <style>
@@ -26,12 +25,14 @@
   --back-second-color: rgb(167, 161, 161);
   --style-color: rgb(172, 31, 31);
   --white-text-color: rgb(212, 201, 201);
-  --style-white-color: white;
+  --style-white-color: rgba(212, 197, 197, 0.698);
+  --yellow-color: rgb(206, 172, 25);
 }
 body{
   width: 100vw;
+  height: 100vh;
   height: auto;
-  background-color: var(--back-second-color);
+  background-color: var(--back-main-color);
   overflow-x: hidden;
 }
 #app {
@@ -60,6 +61,6 @@ body{
   justify-content: center;
   height: auto;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 70px;
 }
 </style>
