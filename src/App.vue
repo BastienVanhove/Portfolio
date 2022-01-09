@@ -1,11 +1,17 @@
 <script lang="ts" setup>
   import content from "./components/content/content.vue"
   import visualisator from "./components/visualisator/visualisator.vue"
+  import headerC from "./components/header/header.vue"
 </script>
 
 <template>
-    <content/>
-    <visualisator/>
+    <div class="background">
+      <img src="" alt="background image">
+    </div>
+    <headerC/>
+    <div class="content">
+      <content/>
+    </div>
 </template>
 
 <style>
@@ -24,6 +30,11 @@ body{
   height: 100%;
   width: 100%;
   background-color: var(--back-main-color);
+}
+.content {
   display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
 }
 </style>
