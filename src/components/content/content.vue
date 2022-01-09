@@ -1,8 +1,6 @@
 <template>
     <div class="container">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, expedita quidem! Aperiam accusantium eligendi autem delectus ipsa expedita magni explicabo, cum, laboriosam porro quaerat id temporibus. Illo voluptas minus placeat?
-        </p>
+
     </div>
 </template>
 
@@ -11,6 +9,6 @@
     .container{
         width: 60%;
         height: 200vh;
-        background-color: red;
+        box-shadow: 0 0 12px 6px rgb(19, 18, 18);
     }
 </style>

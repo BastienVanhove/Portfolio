@@ -23,7 +23,8 @@
   padding: 0;
   box-sizing: border-box;
 
-  --back-main-color: rgb(24, 23, 23);
+  --back-main-color: rgb(41, 39, 39);
+  --style-color: rgb(172, 31, 31);
 }
 body{
   height: 100vh;
