@@ -4,7 +4,7 @@
             <i class="fab fa-github"></i>
         </a>
         <ul class="menu">
-            <li>.about()</li>
+            <li class="active">.about()</li>
             <li>.contact()</li>
             <li>.project()</li>
             <li>.social()</li>
@@ -34,6 +34,9 @@
     li:hover{
         transform: scale(1.1)
     }
+    .active{
+        color: var(--style-color);
+    }
     .githubLogo{
         color: var(--style-color);
         font-size: 2.8em;
@@ -52,5 +55,6 @@
         width: 100%;
         height: 50px;
         display: flex;
+        background-image: linear-gradient(to top, transparent, var(--back-main-color))
     }
 </style>

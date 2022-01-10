@@ -20,7 +20,7 @@
   --title-font: 'Abril Fatface', cursive;
   --text-font: 'Roboto', sans-serif;
 
-  --back-main-color: rgb(42, 40, 40);
+  --back-main-color: #181616;
   --back-second-color: rgb(167, 161, 161);
   --style-color: #6138c6;
   --white-text-color: rgb(212, 201, 201);
@@ -32,7 +32,7 @@ body{
   height: 100vh;
   height: auto;
   background-color: var(--back-main-color);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 #app {
   width: 100vw;
