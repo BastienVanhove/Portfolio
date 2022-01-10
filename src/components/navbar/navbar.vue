@@ -1,8 +1,8 @@
 <template>
     <div class="navbar">
-        <div class="githubLogo" title="show project on my github">
+        <a href="https://github.com/BastienVanhove" class="githubLogo" title="Show my Github!">
             <i class="fab fa-github"></i>
-        </div>
+        </a>
         <ul class="menu">
             <li>.about()</li>
             <li>.contact()</li>
@@ -28,6 +28,11 @@
         margin-top: auto;
         margin-bottom: auto;
         letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.25s;
+    }
+    li:hover{
+        transform: scale(1.1)
     }
     .githubLogo{
         color: var(--style-color);

@@ -5,9 +5,8 @@
 
 <template>
     <navbarC/>
-    <div class="content">
-      <content/>
-    </div>
+    <content/>
+
 </template>
 
 <style>
@@ -23,7 +22,7 @@
 
   --back-main-color: rgb(42, 40, 40);
   --back-second-color: rgb(167, 161, 161);
-  --style-color: rgb(172, 31, 31);
+  --style-color: #6138c6;
   --white-text-color: rgb(212, 201, 201);
   --style-white-color: rgba(212, 197, 197, 0.698);
   --yellow-color: rgb(206, 172, 25);
@@ -36,13 +35,10 @@ body{
   overflow-x: hidden;
 }
 #app {
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   height: auto;
-}
-.content {
-  height: auto;
-  width: 100%;
-  margin-top: 70px;
-  margin-left: 20%;
+  display: flex;
+  flex-direction: column
 }
 </style>
