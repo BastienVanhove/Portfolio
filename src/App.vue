@@ -39,28 +39,10 @@ body{
   width: 100%;
   height: auto;
 }
-.background{
-  position: absolute;
-  z-index: -1;
-  pointer-events: none;
-  user-select: none;
-  height: 100vh;
-  overflow-y: hidden;
-}
-.filter{
-  position: absolute;
-  background: rgba(19, 18, 18, 0.233);
-  height: 100%;
-  width: 100%;
-}
-.background>img{
-  width: 100vw;
-}
 .content {
-  display: flex;
-  justify-content: center;
   height: auto;
   width: 100%;
   margin-top: 70px;
+  margin-left: 15%;
 }
 </style>

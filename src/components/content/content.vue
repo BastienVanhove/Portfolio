@@ -11,9 +11,13 @@
     }
     .container{
         width: 600px;
-        aspect-ratio: 0.7;
-        border: 2px solid var(--style-white-color);
+        height: calc(100vh - 80px);
+        border: 1px solid white;
         overflow: hidden;
         border-radius: 5px;
+        overflow-y: scroll;
+    }
+    .container::-webkit-scrollbar{
+        display: none;
     }
 </style>
