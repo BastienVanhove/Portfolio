@@ -4,9 +4,9 @@
 </script>
 
 <template>
+    <div class="mouse"></div>
     <navbarC/>
     <content/>
-
 </template>
 
 <style>
@@ -40,5 +40,12 @@ body{
   height: auto;
   display: flex;
   flex-direction: column
+}
+.mouse{
+  height: 50px;
+  width: 50px;
+  border: 5px solid var(--style-color);
+  margin: 100px;
+  position: absolute;
 }
 </style>
