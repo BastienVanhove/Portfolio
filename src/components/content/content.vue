@@ -21,6 +21,7 @@
                     </div>
                     <div class="description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ipsa id quam labore odio. Dolor, veniam fugiat, dicta porro quae perferendis repudiandae eveniet autem nam commodi accusantium accusamus reiciendis.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque totam dolor ad. Obcaecati deleniti consequuntur quo alias, vitae aliquid praesentium? Incidunt facere saepe beatae, est necessitatibus id aut suscipit provident.
                     </div>
                 </div>
                 <div class="content contact marginContent">
@@ -56,6 +57,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ipsa id quam labore odio. Dolor, veniam fugiat, dicta porro quae perferendis repudiandae eveniet autem nam commodi accusantium accusamus reiciendis.
                     </div>
                 </div>
+                <div class="void"></div>
             </div>
         </div>
     </div>
@@ -70,6 +72,10 @@
         overflow-y: scroll;
         position: relative;
         border: 2px solid var(--style-color);
+    }
+    .void{
+        height: 40vh;
+        width: 100%;
     }
     .flex{
         display: flex;

@@ -4,7 +4,11 @@
 </script>
 
 <template>
-    <div class="mouse"></div>
+    <div class="mouse">
+      <div class="innerMouse">
+
+      </div>
+    </div>
     <navbarC/>
     <content/>
 </template>
@@ -47,5 +51,47 @@ body{
   border: 5px solid var(--style-color);
   margin: 100px;
   position: absolute;
+  animation: 3s rotate infinite linear;
+}
+.innerMouse{
+  height: 50px;
+  margin: -5px;
+  transform-origin: 50% 50%;
+  transform: scale(0);
+  aspect-ratio: 1;
+  background-color: var(--style-color);
+  transition: 0.15s;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg)
+  }
+  to{
+    transform: rotate(360deg)
+  }
 }
 </style>
+
+<script lang="ts">
+  export default{
+    mounted(){
+      const mouse : any = document.querySelector('.mouse')
+      const innerMouse : any = document.querySelector('.innerMouse')
+      mouse?.addEventListener('click',()=>{
+        innerMouse.style.transform = 'scale(1)'
+        setTimeout(()=>{
+          innerMouse.style.transform = 'scale(0)'
+        },200)
+      })
+    }
+  }
+</script>
+
+
+
+
+
+
+
+
+
