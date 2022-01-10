@@ -5,9 +5,7 @@
 
 <template>
     <div class="mouse">
-      <div class="innerMouse">
-
-      </div>
+      <div class="innerMouse"></div>
     </div>
     <navbarC/>
     <content/>
@@ -37,6 +35,7 @@ body{
   height: auto;
   background-color: var(--back-main-color);
   overflow: hidden;
+  cursor: none;
 }
 #app {
   width: 100vw;
@@ -51,7 +50,9 @@ body{
   border: 5px solid var(--style-color);
   margin: 100px;
   position: absolute;
+  z-index: 9999;
   animation: 3s rotate infinite linear;
+  pointer-events: none;
 }
 .innerMouse{
   height: 50px;
@@ -77,11 +78,19 @@ body{
     mounted(){
       const mouse : any = document.querySelector('.mouse')
       const innerMouse : any = document.querySelector('.innerMouse')
-      mouse?.addEventListener('click',()=>{
+      const size = mouse.getBoundingClientRect().height / 2
+      window.addEventListener('mousemove',(e)=>{
+        console.log(e)
+        let x = e.clientX
+        let y = e.clientY
+        mouse.style.marginLeft = `${x - size}px`
+        mouse.style.marginTop = `${y - size }px`
+      })
+      window.addEventListener('click',()=>{
         innerMouse.style.transform = 'scale(1)'
         setTimeout(()=>{
           innerMouse.style.transform = 'scale(0)'
-        },200)
+        },150)
       })
     }
   }

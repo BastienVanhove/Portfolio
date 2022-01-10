@@ -28,7 +28,6 @@
         margin-top: auto;
         margin-bottom: auto;
         letter-spacing: 2px;
-        cursor: pointer;
         transition: 0.25s;
     }
     li:hover{
@@ -43,7 +42,6 @@
         margin-left: 45px;
         margin-top: 10px;
         transition: 0.25s;
-        cursor: pointer;
     }
     .githubLogo:hover{
         transform: scale(1.1)
