@@ -42,6 +42,7 @@
         margin-left: 45px;
         margin-top: 10px;
         transition: 0.25s;
+        cursor: none;
     }
     .githubLogo:hover{
         transform: scale(1.1)

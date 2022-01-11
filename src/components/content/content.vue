@@ -105,7 +105,7 @@
         width: var(--sizeBar);
         position: absolute;
         border: 2px solid var(--style-color);
-        border-radius: 5px;
+        border-radius: 50%;
         margin-left: -8px;
         background-color: var(--back-main-color);
         transition: 0.1s;
@@ -129,8 +129,9 @@
         background-image: linear-gradient(to bottom, transparent 20%, var(--back-main-color));
         position: fixed;
         height: 100px;
-        width: 100%;
+        width: 45%;
         bottom: 0;
+        z-index: 1000;
     }
     .marginContent{
         margin-top: 60vh;
