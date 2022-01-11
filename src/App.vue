@@ -80,11 +80,21 @@ body{
       const innerMouse : any = document.querySelector('.innerMouse')
       const size = mouse.getBoundingClientRect().height / 2
       window.addEventListener('mousemove',(e)=>{
-        console.log(e)
         let x = e.clientX
         let y = e.clientY
         mouse.style.marginLeft = `${x - size}px`
         mouse.style.marginTop = `${y - size *2}px`
+        let hoverElement = e.path[0]
+        if(hoverElement.className == 'hoverable'){
+          mouse.style.height =  '25px'
+          mouse.style.width =  '25px'
+          mouse.style.borderRadius = '5px'
+        }
+        else{
+          mouse.style.height =  '30px'
+          mouse.style.width =  '30px'
+          mouse.style.borderRadius = '0px'
+        }
       })
       window.addEventListener('click',()=>{
         innerMouse.style.transform = 'scale(1)'
@@ -92,7 +102,14 @@ body{
           innerMouse.style.transform = 'scale(0)'
         },150)
       })
-    }
+    },
+    methods: {
+      
+    }, 
+    data(){
+      return{
+      }
+    },
   }
 </script>
 

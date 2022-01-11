@@ -4,10 +4,10 @@
             <i class="fab fa-github"></i>
         </a>
         <ul class="menu">
-            <li class="active">.about()</li>
-            <li>.contact()</li>
-            <li>.project()</li>
-            <li>.social()</li>
+            <li class="hoverable active">.about()</li>
+            <li class="hoverable">.contact()</li>
+            <li class="hoverable">.project()</li>
+            <li class="hoverable">.social()</li>
         </ul>
     </div>
 </template>

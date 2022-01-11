@@ -86,7 +86,7 @@
     }
     .barContainer{
         height: 50vh;
-        width: 2px;
+        width: 1px;
         margin-top: 15px;
         margin-left: 20px;
         display: flex;
@@ -100,13 +100,13 @@
         border-radius: 5px;
     }
     .bar{
-        --sizeBar: 21px;
+        --sizeBar: 17px;
         height: var(--sizeBar);
         width: var(--sizeBar);
         position: absolute;
         border: 2px solid var(--style-color);
-        border-radius: 50%;
-        margin-left: -9px;
+        border-radius: 5px;
+        margin-left: -8px;
         background-color: var(--back-main-color);
         transition: 0.1s;
     }
