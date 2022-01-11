@@ -41,6 +41,13 @@ body{
   overflow: hidden;
   cursor: none;
 }
+div::selection{
+  background: var(--style-color);
+}
+span::selection{
+  background: var(--style-color);
+  color: white;
+}
 #app {
   width: 100vw;
   height: 100vh;
@@ -79,7 +86,7 @@ body{
   transform: scale(0);
   aspect-ratio: 1;
   background-color: var(--style-color);
-  transition: 0.15s;
+  transition: 0.35s;
 }
 @keyframes bounce {
   from {
@@ -116,7 +123,7 @@ body{
         innerMouse.style.transform = 'scale(1)'
         setTimeout(()=>{
           innerMouse.style.transform = 'scale(0)'
-        },150)
+        },200)
       })
     },
     methods: {

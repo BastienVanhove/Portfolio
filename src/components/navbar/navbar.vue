@@ -17,6 +17,7 @@
         display:flex;
         margin-left: auto;
         margin-right: 45px;
+        user-select: none;
     }
     li{
         color: var(--white-text-color);
@@ -31,7 +32,8 @@
         transition: 0.25s;
     }
     li:hover{
-        transform: scale(1.1)
+        transform: scale(1.1);
+        color: var(--style-color)
     }
     .active{
         color: var(--style-color);
@@ -57,6 +59,12 @@
         z-index: 1000;
         background-image: linear-gradient(to top, transparent, var(--back-main-color))
     }
+    .hoverable>span{
+        transition: 0.25s;
+    }
+    .hoverable>span:hover{
+        color: var(--style-color)
+    }
 </style>
 
 <script lang="ts">
@@ -65,6 +73,7 @@
             const mouse : any = document.querySelector('.mouse')
             const hoverable : any = document.querySelectorAll('.hoverable')
             const mouseScale : any = document.querySelector('.mouseScale')
+            const githubLogo : any = document.querySelector('.githubLogo')
 
             let hoverFunction = () =>{
                 mouseScale.style.transform = 'scale(1)'
@@ -78,6 +87,8 @@
                 h.addEventListener('mouseover', hoverFunction)
                 h.addEventListener('mouseout', OutFunction)
             })
+            githubLogo.addEventListener('mouseover', hoverFunction)
+            githubLogo.addEventListener('mouseout', OutFunction)
         }
     }
 </script>

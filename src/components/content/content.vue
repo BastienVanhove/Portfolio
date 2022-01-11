@@ -125,7 +125,7 @@
         top: calc(87.5% - (var(--sizeBar) / 2) );
     }
     .bar:hover{
-        transform: scale(1.25);
+        transform: scale(1.5);
     }
     .shadow{
         background-image: linear-gradient(to bottom, transparent 20%, var(--back-main-color));
@@ -134,6 +134,7 @@
         width: 45%;
         bottom: 0;
         z-index: 1000;
+        pointer-events: none;
     }
     .marginContent{
         margin-top: 60vh;
@@ -170,3 +171,25 @@
         color: var(--style-color);
     }
 </style>
+
+<script lang="ts">
+    export default{
+        mounted(){
+            const mouse : any = document.querySelector('.mouse')
+            const mouseScale : any = document.querySelector('.mouseScale')
+            const bar = document.querySelectorAll('.bar')
+            let hoverFunction = () =>{
+                mouseScale.style.transform = 'scale(1)'
+                mouse.style.borderRadius = '10px'
+            }
+            let OutFunction = () =>{
+                mouseScale.style.transform = 'scale(0.65)'
+                mouse.style.borderRadius = '0px'
+            }
+            bar.forEach(function(h : any){
+                h.addEventListener('mouseover', hoverFunction)
+                h.addEventListener('mouseout', OutFunction)
+            })
+        }
+    }
+</script>
