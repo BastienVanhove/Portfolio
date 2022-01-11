@@ -67,11 +67,11 @@
             const mouseScale : any = document.querySelector('.mouseScale')
 
             let hoverFunction = () =>{
-                mouseScale.style.transform = 'scale(0.7)'
-                mouse.style.borderRadius = '5px'
+                mouseScale.style.transform = 'scale(1)'
+                mouse.style.borderRadius = '10px'
             }
             let OutFunction = () =>{
-                mouseScale.style.transform = 'scale(1)'
+                mouseScale.style.transform = 'scale(0.65)'
                 mouse.style.borderRadius = '0px'
             }
             hoverable.forEach(function(h : any){

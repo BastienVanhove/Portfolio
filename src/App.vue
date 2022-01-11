@@ -52,7 +52,6 @@ body{
   position: absolute;
   height: 50px;
   width: 50px;
-  border: 1px solid var(--style-color);
   display: flex;
   justify-content: space-around;
   pointer-events: none;
@@ -61,7 +60,8 @@ body{
 .mouseScale{
   margin-top: auto;
   margin-bottom: auto;
-  transition: 0.2s;
+  transform: scale(0.65);
+  transition: 0.15s;
 }
 .mouse{
   height: 30px;
@@ -112,7 +112,7 @@ body{
         containerMouse.style.marginLeft = `${x - size}px`
         containerMouse.style.marginTop = `${y - size *2}px`
       })
-      window.addEventListener('click',()=>{
+      window.addEventListener('mousedown',()=>{
         innerMouse.style.transform = 'scale(1)'
         setTimeout(()=>{
           innerMouse.style.transform = 'scale(0)'
