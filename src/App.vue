@@ -45,8 +45,8 @@ body{
   flex-direction: column
 }
 .mouse{
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   border: 5px solid var(--style-color);
   margin: 100px;
   position: absolute;
@@ -55,7 +55,7 @@ body{
   pointer-events: none;
 }
 .innerMouse{
-  height: 50px;
+  height: 30px;
   margin: -5px;
   transform-origin: 50% 50%;
   transform: scale(0);
@@ -84,7 +84,7 @@ body{
         let x = e.clientX
         let y = e.clientY
         mouse.style.marginLeft = `${x - size}px`
-        mouse.style.marginTop = `${y - size }px`
+        mouse.style.marginTop = `${y - size *2}px`
       })
       window.addEventListener('click',()=>{
         innerMouse.style.transform = 'scale(1)'

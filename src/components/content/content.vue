@@ -8,7 +8,6 @@
                     <div class="bar bar2"></div>
                     <div class="bar bar3"></div>
                     <div class="bar bar4"></div>
-                    <div class="barFiled"></div>
                 </div>
             </div>
             <div class="container-content">
@@ -110,17 +109,6 @@
         margin-left: -9px;
         background-color: var(--back-main-color);
         transition: 0.1s;
-    }
-    .barFiled{
-        pointer-events: none;
-        --sizeBar: 12px;
-        margin-left: -4.8px;
-        border-radius: 50%;
-        position: absolute;
-        background: var(--style-color);
-        height: var(--sizeBar);
-        width: var(--sizeBar);
-        top: calc(12.5% - (var(--sizeBar) / 2) );
     }
     .bar1{
         top: calc(12.5% - (var(--sizeBar) / 2) );
