@@ -57,3 +57,12 @@
         background-image: linear-gradient(to top, transparent, var(--back-main-color))
     }
 </style>
+
+<script lang="ts">
+    export default{
+        mounted(){
+            const mouse = document.querySelector('.mouse')
+            console.log(mouse, 'from navbar')
+        }
+    }
+</script>
