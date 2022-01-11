@@ -54,6 +54,7 @@
         width: 100%;
         height: 50px;
         display: flex;
+        z-index: 1000;
         background-image: linear-gradient(to top, transparent, var(--back-main-color))
     }
 </style>
@@ -61,8 +62,22 @@
 <script lang="ts">
     export default{
         mounted(){
-            const mouse = document.querySelector('.mouse')
-            console.log(mouse, 'from navbar')
+            const mouse : any = document.querySelector('.mouse')
+            const hoverable : any = document.querySelectorAll('.hoverable')
+            const mouseScale : any = document.querySelector('.mouseScale')
+
+            let hoverFunction = () =>{
+                mouseScale.style.transform = 'scale(0.7)'
+                mouse.style.borderRadius = '5px'
+            }
+            let OutFunction = () =>{
+                mouseScale.style.transform = 'scale(1)'
+                mouse.style.borderRadius = '0px'
+            }
+            hoverable.forEach(function(h : any){
+                h.addEventListener('mouseover', hoverFunction)
+                h.addEventListener('mouseout', OutFunction)
+            })
         }
     }
 </script>

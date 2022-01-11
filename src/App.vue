@@ -4,8 +4,12 @@
 </script>
 
 <template>
-    <div class="mouse">
-      <div class="innerMouse"></div>
+    <div class="containerMouse">
+      <div class="mouseScale">
+        <div class="mouse">
+          <div class="innerMouse"></div>
+        </div>
+      </div>
     </div>
     <navbarC/>
     <content/>
@@ -44,15 +48,29 @@ body{
   display: flex;
   flex-direction: column
 }
+.containerMouse{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border: 1px solid var(--style-color);
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+  z-index: 9999;
+}
+.mouseScale{
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: 0.2s;
+}
 .mouse{
   height: 30px;
   width: 30px;
   border: 5px solid var(--style-color);
-  margin: 100px;
-  position: absolute;
-  z-index: 9999;
-  animation: 3s rotate infinite linear;
-  pointer-events: none;
+  animation: 2s bounce infinite linear;
+  margin-top: auto;
+  margin-bottom: auto;
+  transition: 0.25s;
 }
 .innerMouse{
   height: 150%;
@@ -63,12 +81,21 @@ body{
   background-color: var(--style-color);
   transition: 0.15s;
 }
-@keyframes rotate {
+@keyframes bounce {
   from {
-    transform: rotate(0deg)
+    transform: scale(0.9) rotate(0deg);
+  }
+  25%{
+    transform: scale(1) rotate(90deg);
+  }
+  50%{
+    transform: scale(0.8) rotate(180deg);
+  }
+  75%{
+    transform: scale(1) rotate(270deg);
   }
   to{
-    transform: rotate(360deg)
+    transform: scale(1) rotate(360deg);
   }
 }
 </style>
@@ -76,14 +103,14 @@ body{
 <script lang="ts">
   export default{
     mounted(){
-      const mouse : any = document.querySelector('.mouse')
+      const containerMouse : any = document.querySelector('.containerMouse')
       const innerMouse : any = document.querySelector('.innerMouse')
-      const size = mouse.getBoundingClientRect().height / 2
+      const size = containerMouse.getBoundingClientRect().height / 2
       window.addEventListener('mousemove',(e)=>{
         let x = e.clientX
         let y = e.clientY
-        mouse.style.marginLeft = `${x - size}px`
-        mouse.style.marginTop = `${y - size *2}px`
+        containerMouse.style.marginLeft = `${x - size}px`
+        containerMouse.style.marginTop = `${y - size *2}px`
       })
       window.addEventListener('click',()=>{
         innerMouse.style.transform = 'scale(1)'

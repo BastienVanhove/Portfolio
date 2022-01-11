@@ -70,7 +70,9 @@
         margin-top: 40vh;
         overflow-y: scroll;
         position: relative;
-        border: 2px solid var(--style-color);
+        border: 3px solid var(--style-color);
+        z-index: 2;
+        border-radius: 5px;
     }
     .void{
         height: 40vh;
