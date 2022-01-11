@@ -73,6 +73,7 @@
         border: 3px solid var(--style-color);
         z-index: 2;
         border-radius: 5px;
+        background: rgba(0, 0, 0, 0.356);
     }
     .void{
         height: 40vh;
@@ -189,6 +190,20 @@
             bar.forEach(function(h : any){
                 h.addEventListener('mouseover', hoverFunction)
                 h.addEventListener('mouseout', OutFunction)
+            })
+
+            const containerContent : any = document.querySelector('.container-content')
+            const bar1 : any = document.querySelector('.bar1')
+            const bar2 : any = document.querySelector('.bar2')
+            const bar3 : any = document.querySelector('.bar3')
+            const bar4 : any = document.querySelector('.bar4')
+            
+            bar2.addEventListener('click',()=>{
+                console.log(bar2)
+                containerContent.scrollTo({
+                    top: 100,
+                    behavior: 'smooth'
+                })
             })
         }
     }
