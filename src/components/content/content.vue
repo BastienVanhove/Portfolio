@@ -4,7 +4,7 @@
         <div class="flex">
             <div class="barContainer">
                 <div class="filed">
-                    <div class="bar bar1"></div>
+                    <div class="bar bar1 active"></div>
                     <div class="bar bar2"></div>
                     <div class="bar bar3"></div>
                     <div class="bar bar4"></div>
@@ -23,7 +23,7 @@
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque totam dolor ad. Obcaecati deleniti consequuntur quo alias, vitae aliquid praesentium? Incidunt facere saepe beatae, est necessitatibus id aut suscipit provident.
                     </div>
                 </div>
-                <div class="content contact marginContent">
+                <div class="content contact">
                     <div class="title">
                         Bastien
                         <span class="styleColor">
@@ -34,7 +34,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ipsa id quam labore odio. Dolor, veniam fugiat, dicta porro quae perferendis repudiandae eveniet autem nam commodi accusantium accusamus reiciendis.
                     </div>
                 </div>
-                <div class="content project marginContent">
+                <div class="content project">
                     <div class="title">
                         Bastien
                         <span class="styleColor">
@@ -45,7 +45,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ipsa id quam labore odio. Dolor, veniam fugiat, dicta porro quae perferendis repudiandae eveniet autem nam commodi accusantium accusamus reiciendis.
                     </div>
                 </div>
-                <div class="content social marginContent">
+                <div class="content social">
                     <div class="title">
                         Bastien
                         <span class="styleColor">
@@ -56,7 +56,6 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ipsa id quam labore odio. Dolor, veniam fugiat, dicta porro quae perferendis repudiandae eveniet autem nam commodi accusantium accusamus reiciendis.
                     </div>
                 </div>
-                <div class="void"></div>
             </div>
         </div>
     </div>
@@ -74,10 +73,6 @@
         z-index: 2;
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.356);
-    }
-    .void{
-        height: 40vh;
-        width: 100%;
     }
     .flex{
         display: flex;
@@ -113,6 +108,9 @@
         background-color: var(--back-main-color);
         transition: 0.1s;
     }
+    .active{
+        background: var(--style-color);
+    }
     .bar1{
         top: calc(12.5% - (var(--sizeBar) / 2) );
     }
@@ -145,6 +143,7 @@
     }
     .content{
         margin-left: 25px;
+        height: 60vh;
     }
     .container::-webkit-scrollbar{
         display: none;
@@ -192,19 +191,20 @@
                 h.addEventListener('mouseout', OutFunction)
             })
 
-            const containerContent : any = document.querySelector('.container-content')
-            const bar1 : any = document.querySelector('.bar1')
-            const bar2 : any = document.querySelector('.bar2')
-            const bar3 : any = document.querySelector('.bar3')
-            const bar4 : any = document.querySelector('.bar4')
+            const containerContent : any = document.querySelector('.container')
+            const contents : any = document.querySelectorAll('.content')
             
-            bar2.addEventListener('click',()=>{
-                console.log(bar2)
-                containerContent.scrollTo({
-                    top: 100,
-                    behavior: 'smooth'
+            for(let i = 0; i<bar.length; i++) {
+                bar[i].addEventListener('click',()=>{
+                    const size = window.innerHeight * 0.60
+                    let bounding = contents[i].getBoundingClientRect()
+                    let marginTop = size * i
+                    containerContent.scrollTo({
+                        top: marginTop,
+                        behavior: 'smooth'
+                    })
                 })
-            })
+            }
         }
     }
 </script>

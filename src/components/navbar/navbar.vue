@@ -89,6 +89,19 @@
             })
             githubLogo.addEventListener('mouseover', hoverFunction)
             githubLogo.addEventListener('mouseout', OutFunction)
+
+            const containerContent : any = document.querySelector('.container')
+            
+            for(let i = 0; i<hoverable.length; i++) {
+                hoverable[i].addEventListener('click',()=>{
+                    const size = window.innerHeight * 0.60
+                    let marginTop = size * i
+                    containerContent.scrollTo({
+                        top: marginTop,
+                        behavior: 'smooth'
+                    })
+                })
+            }
         }
     }
 </script>
