@@ -36,6 +36,7 @@
         color: var(--style-color)
     }
     .active{
+        transform: scale(1.25);
         color: var(--style-color);
     }
     .githubLogo{
