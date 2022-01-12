@@ -106,7 +106,7 @@
         border-radius: 50%;
         margin-left: -8px;
         background-color: var(--back-main-color);
-        transition: 0.1s;
+        transition: 0.25s;
     }
     .active{
         background: var(--style-color);
@@ -197,24 +197,39 @@
 
             for(let i = 0; i<bar.length; i++) {
                 bar[i].addEventListener('click',()=>{
-                    let bounding = contents[i].getBoundingClientRect()
-                    let marginTop = size * i
+                    const bounding = contents[i].getBoundingClientRect()
+                    const marginTop = size * i
                     containerContent.scrollTo({
-                        top: marginTop,
+                        top: marginTop + 10,
                         behavior: 'smooth'
                     })
                 })
             }
 
-            containerContent.addEventListener('wheel',(e : any)=>{
-                let scrollTop : number = parseInt(containerContent.scrollTop)
-                let onSection = scrollTop/size
-                console.log(Math.floor(onSection))
+            containerContent.addEventListener('scroll',(e : any)=>{
+                const scrollTop : number = parseInt(containerContent.scrollTop)
+                const onSection : number = Math.floor(scrollTop/size)
+                const barOnSection : any = bar[onSection]
+                let className : string =  barOnSection.className
+                
+                const classSplit : string[] = className.split(' ')
+                if(!classSplit[2]){
+                    bar.forEach(b=>{
+                        const split : string[] = b.className.split(' ')
+                        if(split[2]) {
+                            const rec : string = `${split[0]} ${split[1]}`
+                            b.className = rec
+                        }
+                    })
+                    className = className + " active"
+                    barOnSection.className = className
+                    console.log(className)
+                } 
             })
         },
         data(){
             return {
-                
+
             }
         }
     }

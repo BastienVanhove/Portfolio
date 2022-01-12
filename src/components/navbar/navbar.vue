@@ -97,7 +97,7 @@
                     const size = window.innerHeight * 0.60
                     let marginTop = size * i
                     containerContent.scrollTo({
-                        top: marginTop,
+                        top: marginTop + 10,
                         behavior: 'smooth'
                     })
                 })
