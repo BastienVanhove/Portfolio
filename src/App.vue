@@ -12,6 +12,9 @@
       </div>
     </div>
     <navbarC/>
+    <div class="button">
+      Just show me your Projects
+    </div>
     <content/>
 </template>
 
@@ -58,6 +61,40 @@ p::selection{
   height: auto;
   display: flex;
   flex-direction: column
+}
+.button{
+  position: absolute;
+  margin-left: 25vw;
+  margin-top: 150px;
+  border: 3px solid var(--style-color);
+  color:  var(--white-text-color);
+  border-radius: 25px;
+  padding: 15px;
+  font-size: 1.25em;
+  background: rgba(0, 0, 0, 0.356);
+  animation: 3s floaty infinite;
+}
+.button:hover{
+
+}
+@keyframes floaty {
+  to{
+    top: 0px;
+    left: 0px;
+  }
+  50%{
+    top: 10px;
+    left: 20px;
+  }
+  from{
+    top: 0px;
+    left: 0px;
+  }
+}
+@media screen and (max-width: 900px){
+  .button{
+    display: none;
+  }
 }
 .containerMouse{
   position: absolute;

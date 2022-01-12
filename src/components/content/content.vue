@@ -73,7 +73,7 @@
     .container{
         width: 45%;
         height: 60vh;
-        margin-left: 20%;
+        margin-left: 15vw;
         margin-top: 40vh;
         overflow-y: scroll;
         position: relative;
@@ -120,7 +120,7 @@
         width: var(--sizeBar);
         position: absolute;
         border: 2px solid var(--style-color);
-        border-radius: 50%;
+        border-radius: 5px;
         margin-left: -8px;
         background-color: var(--back-main-color);
         transition: 0.25s;
