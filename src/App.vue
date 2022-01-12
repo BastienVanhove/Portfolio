@@ -48,6 +48,10 @@ span::selection{
   background: var(--style-color);
   color: white;
 }
+p::selection{
+  background: var(--style-color);
+  color: white;
+}
 #app {
   width: 100vw;
   height: 100vh;
@@ -74,7 +78,7 @@ span::selection{
   height: 30px;
   width: 30px;
   border: 5px solid var(--style-color);
-  animation: 2s bounce infinite linear;
+  animation: 3s bounce infinite linear;
   margin-top: auto;
   margin-bottom: auto;
   transition: 0.25s;
@@ -90,16 +94,16 @@ span::selection{
 }
 @keyframes bounce {
   from {
-    transform: scale(0.9) rotate(0deg);
+    transform: scale(1) rotate(0deg);
   }
   25%{
-    transform: scale(1) rotate(90deg);
+    transform: scale(1.2) rotate(90deg);
   }
   50%{
     transform: scale(0.8) rotate(180deg);
   }
   75%{
-    transform: scale(1) rotate(270deg);
+    transform: scale(1.1) rotate(270deg);
   }
   to{
     transform: scale(1) rotate(360deg);

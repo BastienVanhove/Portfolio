@@ -224,6 +224,18 @@
                 })
             }
 
+            let hoverFunctionBody= () =>{
+                mouseScale.style.transform = 'scale(2.5)'
+                mouse.style.borderRadius = '5px'
+            }
+            let OutFunctionBody = () =>{
+                mouseScale.style.transform = 'scale(0.65)'
+                mouse.style.borderRadius = '0px'
+            }
+            const app : any = document.querySelector('#particles-js')
+            app.addEventListener('mouseover', hoverFunctionBody)
+            app.addEventListener('mouseout', OutFunctionBody)
+
             containerContent.addEventListener('scroll',(e : any)=>{
                 size = window.innerHeight * 0.60
                 const scrollTop : number = parseInt(containerContent.scrollTop)
