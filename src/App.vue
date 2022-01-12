@@ -13,7 +13,7 @@
     </div>
     <navbarC/>
     <div class="button">
-      Just show me your Projects
+      I don't care, show me your Projects
     </div>
     <content/>
 </template>
@@ -42,7 +42,6 @@ body{
   height: auto;
   background-color: var(--back-main-color);
   overflow: hidden;
-  cursor: none;
 }
 div::selection{
   background: var(--style-color);
@@ -64,20 +63,22 @@ p::selection{
 }
 .button{
   position: absolute;
-  margin-left: 29vw;
-  margin-top: 140px;
+  margin-left: 15vw;
+  margin-top: calc(40vh - 60px);
   border: 3px solid var(--style-color);
   color:  var(--white-text-color);
-  border-radius: 25px;
-  padding: 15px;
-  font-size: 1.25em;
+  border-radius: 0px;
+  padding: 10px;
+  font-size: 1.15em;
   background: rgba(0, 0, 0, 0.356);
   animation: 3s floaty infinite;
   z-index: 1000;
+  cursor: pointer;
+  user-select: none;
   transition: 0.15s;
+  font-family: var(--title-font);
 }
 .button:hover{
-  background: var(--white-text-color);
   color: var(--style-color);
 }
 @keyframes floaty {
@@ -85,7 +86,7 @@ p::selection{
     transform: translateY(0px);
   }
   50%{
-    transform: translateY(10px);
+    transform: translateY(5px);
   }
   from{
     transform: translateY(0px);

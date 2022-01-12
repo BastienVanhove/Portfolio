@@ -270,6 +270,10 @@
             const app : any = document.querySelector('#particles-js')
             app.addEventListener('mouseover', hoverFunctionBody)
             app.addEventListener('mouseout', OutFunctionBody)
+            
+            const containerProfileImg : any = document.querySelector('.containerProfileImg')
+            containerProfileImg.addEventListener('mouseover', hoverFunction)
+            containerProfileImg.addEventListener('mouseout', OutFunction)
 
             containerContent.addEventListener('scroll',(e : any)=>{
                 size = window.innerHeight * 0.60
