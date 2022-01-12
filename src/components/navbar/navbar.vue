@@ -23,13 +23,18 @@
         color: var(--white-text-color);
         text-decoration: none;
         list-style: none;
-        padding-left: 25px;
-        font-size: 1.25em;
+        padding-left: 35px;
+        font-size: calc(0.6em + 0.8vw);
         font-family: var(--title-font);
         margin-top: auto;
         margin-bottom: auto;
         letter-spacing: 2px;
         transition: 0.25s;
+    }
+    @media screen and (max-width: 900px) {
+        li{
+            padding-left: 10px;
+        }
     }
     li:hover{
         transform: scale(1.1);

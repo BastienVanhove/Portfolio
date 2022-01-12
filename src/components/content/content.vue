@@ -19,8 +19,15 @@
                         </span>
                     </div>
                     <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ipsa id quam labore odio. Dolor, veniam fugiat, dicta porro quae perferendis repudiandae eveniet autem nam commodi accusantium accusamus reiciendis.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque totam dolor ad. Obcaecati deleniti consequuntur quo alias, vitae aliquid praesentium? Incidunt facere saepe beatae, est necessitatibus id aut suscipit provident.
+                        <p>Hi, I'm Bastien Vanhove</p>
+                        <br>
+                        <p>Web Developer | Self taught</p>
+                        <br>
+                        <p>
+                            J'ai commencer a code en 2020
+                        </p>
+                        <br>
+                        <p>photo de moi TETE</p>
                     </div>
                 </div>
                 <div class="content contact">
@@ -32,6 +39,7 @@
                     </div>
                     <div class="description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ipsa id quam labore odio. Dolor, veniam fugiat, dicta porro quae perferendis repudiandae eveniet autem nam commodi accusantium accusamus reiciendis.
+                        <p>mails : bastienv.capital@gmail.com</p>
                     </div>
                 </div>
                 <div class="content project">
@@ -53,7 +61,7 @@
                         </span>
                     </div>
                     <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ipsa id quam labore odio. Dolor, veniam fugiat, dicta porro quae perferendis repudiandae eveniet autem nam commodi accusantium accusamus reiciendis.
+                        <p>Liste de reseau avec logo</p>
                     </div>
                 </div>
             </div>
@@ -73,6 +81,15 @@
         z-index: 2;
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.356);
+    }
+    @media screen and (max-width: 900px) {
+        .container{
+            margin-top: 20vh;
+            width: 100%;
+            margin-left: 0;
+            border: none;
+            background: none;
+        }
     }
     .flex{
         display: flex;
