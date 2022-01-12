@@ -19,15 +19,12 @@
                         </span>
                     </div>
                     <div class="description">
-                        <p>Hi, I'm Bastien Vanhove</p>
-                        <br>
-                        <p>Web Developer | Self taught</p>
-                        <br>
-                        <p>
-                            J'ai commencer a code en 2020
+                        <div class="containerProfileImg">
+                            <img src="../../assets/images/van.jpg">
+                        </div>
+                        <p class="profileText">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita enim sequi, nam nesciunt excepturi ut corporis eos, quae esse nisi facere voluptas! Id ipsam sunt ad dolorem assumenda distinctio eveniet.
                         </p>
-                        <br>
-                        <p>photo de moi TETE</p>
                     </div>
                 </div>
                 <div class="content contact">
@@ -82,6 +79,43 @@
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.356);
     }
+    .containerProfileImg{
+        margin-top: 35px;
+        border: 5px solid var(--style-color);
+        height: 150px;
+        width: 150px;
+        border-radius: 25px;
+        margin-left: 35px;
+        margin-right: auto;
+        overflow: hidden;
+        user-select: none;
+    }
+    .containerProfileImg:hover >img{
+        transform: scale(1.5)
+    }
+    .containerProfileImg::after{
+        content : '';
+        position : absolute;
+        text-align: center;
+        color: var(--white-text-color);
+        border-radius: 5px;
+        font-size: 0.8em;
+        margin-left: 40px;
+        margin-top: 70px;
+        width: calc(100% - 300px);
+        height: 7px;
+        background-color: var(--style-color);
+    }
+    .containerProfileImg>img{
+        width: 100%;
+        transition: 1s;
+    }
+
+    .profileText{
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     @media screen and (max-width: 900px) {
         .container{
             margin-top: 20vh;
@@ -127,6 +161,7 @@
     }
     .active{
         background: var(--style-color);
+        border: 2px solid var(--white-text-color);
     }
     .bar1{
         top: calc(12.5% - (var(--sizeBar) / 2) );

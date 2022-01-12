@@ -64,8 +64,8 @@ p::selection{
 }
 .button{
   position: absolute;
-  margin-left: 25vw;
-  margin-top: 150px;
+  margin-left: 29vw;
+  margin-top: 140px;
   border: 3px solid var(--style-color);
   color:  var(--white-text-color);
   border-radius: 25px;
@@ -82,16 +82,13 @@ p::selection{
 }
 @keyframes floaty {
   to{
-    top: 0px;
-    left: 0px;
+    transform: translateY(0px);
   }
   50%{
-    top: 10px;
-    left: 20px;
+    transform: translateY(10px);
   }
   from{
-    top: 0px;
-    left: 0px;
+    transform: translateY(0px);
   }
 }
 @media screen and (max-width: 900px){
@@ -157,6 +154,10 @@ p::selection{
       const containerMouse : any = document.querySelector('.containerMouse')
       const innerMouse : any = document.querySelector('.innerMouse')
       const size = containerMouse.getBoundingClientRect().height / 2
+      const mouseScale : any = document.querySelector('.mouseScale')
+      const mouse : any = document.querySelector('.mouse')
+      const button : any = document.querySelector('.button')
+
       window.addEventListener('mousemove',(e)=>{
         let x = e.clientX
         let y = e.clientY
@@ -169,6 +170,17 @@ p::selection{
           innerMouse.style.transform = 'scale(0)'
         },200)
       })
+
+      let hoverFunction = () =>{
+          mouseScale.style.transform = 'scale(1)'
+          mouse.style.borderRadius = '10px'
+      }
+      let OutFunction = () =>{
+          mouseScale.style.transform = 'scale(0.65)'
+          mouse.style.borderRadius = '0px'
+      }
+      button.addEventListener('mouseover', hoverFunction)
+      button.addEventListener('mouseout', OutFunction)
     },
     methods: {
       
