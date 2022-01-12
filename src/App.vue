@@ -69,14 +69,14 @@ p::selection{
   color:  var(--white-text-color);
   border-radius: 0px;
   padding: 10px;
-  font-size: 1.15em;
+  font-size: 1.05em;
   background: rgba(0, 0, 0, 0.356);
   animation: 3s floaty infinite;
   z-index: 1000;
   cursor: pointer;
   user-select: none;
   transition: 0.15s;
-  font-family: var(--title-font);
+  font-family: var(--text-font);
 }
 .button:hover{
   color: var(--style-color);

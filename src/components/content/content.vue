@@ -94,12 +94,13 @@
         transform: scale(1.5)
     }
     .containerProfileImg::after{
-        content : '';
+        content : 'Click On Van Gogh For Show My GitHub';
         position : absolute;
         text-align: center;
         color: var(--white-text-color);
         border-radius: 5px;
-        font-size: 0.8em;
+        font-size: 0.7em;
+        font-family: var(--text-font);
         margin-left: 40px;
         margin-top: 70px;
         width: calc(100% - 300px);
