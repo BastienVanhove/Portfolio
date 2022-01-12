@@ -193,7 +193,8 @@
 
             const containerContent : any = document.querySelector('.container')
             const contents : any = document.querySelectorAll('.content')
-            const size : number = window.innerHeight * 0.60
+            const hoverable : any = document.querySelectorAll('.hoverable')
+            let size : number = window.innerHeight * 0.60
 
             for(let i = 0; i<bar.length; i++) {
                 bar[i].addEventListener('click',()=>{
@@ -207,23 +208,35 @@
             }
 
             containerContent.addEventListener('scroll',(e : any)=>{
+                size = window.innerHeight * 0.60
                 const scrollTop : number = parseInt(containerContent.scrollTop)
                 const onSection : number = Math.floor(scrollTop/size)
                 const barOnSection : any = bar[onSection]
+                const liOnSection : any = hoverable[onSection]
+                let liClassName : string = liOnSection.className
                 let className : string =  barOnSection.className
                 
                 const classSplit : string[] = className.split(' ')
                 if(!classSplit[2]){
-                    bar.forEach(b=>{
+                    bar.forEach(function(b : any){
                         const split : string[] = b.className.split(' ')
                         if(split[2]) {
                             const rec : string = `${split[0]} ${split[1]}`
                             b.className = rec
                         }
                     })
+                    hoverable.forEach(function(h : any){
+                        const split : string[] = h.className.split(' ')
+                        if(split[1]) {
+                            const rec : string = `${split[0]}`
+                            h.className = rec
+                        }
+                    })
                     className = className + " active"
                     barOnSection.className = className
-                    console.log(className)
+
+                    liClassName = liClassName + "active"
+                    liOnSection.className = className
                 } 
             })
         },
