@@ -193,10 +193,10 @@
 
             const containerContent : any = document.querySelector('.container')
             const contents : any = document.querySelectorAll('.content')
-            
+            const size : number = window.innerHeight * 0.60
+
             for(let i = 0; i<bar.length; i++) {
                 bar[i].addEventListener('click',()=>{
-                    const size = window.innerHeight * 0.60
                     let bounding = contents[i].getBoundingClientRect()
                     let marginTop = size * i
                     containerContent.scrollTo({
@@ -204,6 +204,17 @@
                         behavior: 'smooth'
                     })
                 })
+            }
+
+            containerContent.addEventListener('wheel',(e : any)=>{
+                let scrollTop : number = parseInt(containerContent.scrollTop)
+                let onSection = scrollTop/size
+                console.log(Math.floor(onSection))
+            })
+        },
+        data(){
+            return {
+                
             }
         }
     }
