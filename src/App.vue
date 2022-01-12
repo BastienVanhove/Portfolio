@@ -73,9 +73,12 @@ p::selection{
   font-size: 1.25em;
   background: rgba(0, 0, 0, 0.356);
   animation: 3s floaty infinite;
+  z-index: 1000;
+  transition: 0.15s;
 }
 .button:hover{
-
+  background: var(--white-text-color);
+  color: var(--style-color);
 }
 @keyframes floaty {
   to{
