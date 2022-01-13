@@ -66,7 +66,7 @@ p::selection{
 }
 .button{
   position: absolute;
-  margin-left: 15vw;
+  margin-left: 14vw;
   margin-top: calc(40vh - 70px);
   border: 4px solid transparent;
   border-left: 4px solid var(--style-color);

@@ -53,7 +53,8 @@
                         </span>
                     </div>
                     <div class="description">
-                        i like programming chess thing blabla but ...
+                        <p>i like programming chess thing blabla but ...</p>
+                        <p>But can you catch the King ?</p>
                     </div>
                     <div class="chessContainer">
                         <div v-for="x in 8"  :key= "x" class="chessLine">
@@ -72,7 +73,11 @@
                         </span>
                     </div>
                     <div class="description">
-                        <p>Liste de reseau avec logo</p>
+                        <div class="socialList">
+                            <i class="fab fa-twitter-square"></i>
+                            <i class="fab fa-instagram-square"></i>
+                            <i class="fab fa-linkedin"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,7 +89,7 @@
     .container{
         width: 45%;
         height: 60vh;
-        margin-left: 15vw;
+        margin-left: 14vw;
         margin-top: 40vh;
         overflow-y: scroll;
         position: relative;
@@ -92,6 +97,16 @@
         z-index: 2;
         border-radius: 5px;
         background: rgba(0, 0, 0, 0.356);
+    }
+    .socialList{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .socialList>i{
+        margin-top: 0.25em;
+        color: var(--style-color);
+        font-size: 3em;
     }
     .containerProfileImg{
         margin-top: 35px;
