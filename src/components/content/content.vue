@@ -42,12 +42,17 @@
                     <div class="description">
                         <p>i like programming chess thing blabla but ...</p>
                     </div>
-                    <div class="chessContainer">
-                        <div v-for="x in 8"  :key= "x" class="chessLine">
-                            <div v-for="y in 8" :key="y" class="chessCase">
-                                <div v-if="(x + y) % 2 == 0" class="chessUpCase" style="background-color: black"></div>
-                                <div v-else class="chessUpCase" style="background-color: white"></div>
+                    <div class="contentChessAndBut">
+                        <div class="chessContainer">
+                            <div v-for="x in 8"  :key= "x" class="chessLine">
+                                <div v-for="y in 8" :key="y" class="chessCase">
+                                    <div v-if="(x + y) % 2 == 0" class="chessUpCase" style="background-color: black"></div>
+                                    <div v-else class="chessUpCase" style="background-color: white"></div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="gitButton">
+                            Show on GitHub
                         </div>
                     </div>
                 </div>
@@ -154,10 +159,27 @@
         color: white;
         font-size: 1.25em;
     }
+    .contentChessAndBut{
+        margin-top: 25px;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        border: 1px solid red;
+    }
+    .gitButton{
+        background: var(--style-color);
+        height: 35px;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+    }
     .chessContainer{
         margin-top: 25px;
         margin-left: 15px;
-        height: 50%;
+        height: 80%;
         aspect-ratio: 1;
         display: flex;
         justify-content: space-around;
