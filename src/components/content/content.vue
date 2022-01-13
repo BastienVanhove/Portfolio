@@ -53,7 +53,15 @@
                         </span>
                     </div>
                     <div class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus fuga, reiciendis provident quasi vitae corrupti facilis soluta, nesciunt nam nobis, obcaecati quidem debitis magnam! Iste eligendi sequi ratione nemo nam!
+                        i like programming chess thing blabla but ...
+                    </div>
+                    <div class="chessContainer">
+                        <div v-for="x in 8"  :key= "x" class="chessLine">
+                            <div v-for="y in 8" :key="y" class="chessCase">
+                                <div v-if="(x + y) % 2 == 0" class="chessUpCase" style="background-color: black"></div>
+                                <div v-else class="chessUpCase" style="background-color: white"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="content social">
@@ -108,6 +116,49 @@
         flex-direction: column;
         color: white;
         font-size: 1.25em;
+    }
+    .chessContainer{
+        margin-top: 25px;
+        margin-left: 15px;
+        height: 50%;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        transition: 0.5s;
+    }
+    .chessContainer:hover{
+        transform: scale(1.05);
+    }
+    .chessLine{
+        display: flex;
+        justify-content: space-around;
+        height: 12.5%;
+        width: 100%;
+    }
+    .chessCase{
+        height: 90%;
+        aspect-ratio: 1;
+        background: var(--style-color);
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        justify-content: space-around;
+        transition: 0.25s;
+    }
+    .chessUpCase{
+        background: var(--back-main-color);
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 85%;
+        width: 85%;
+        transition: 0.25s;
+    }
+    .blackCase{
+        background: var(--style-color);
+    }
+    .whiteCase{
+        background: var(--white-text-color);
     }
     .containerProfileImg:hover >img{
         transform: scale(1.5)
