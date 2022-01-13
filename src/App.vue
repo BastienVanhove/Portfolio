@@ -68,16 +68,18 @@ p::selection{
   position: absolute;
   margin-left: 15vw;
   margin-top: calc(40vh - 70px);
-  border: 3px solid var(--style-color);
+  border: 4px solid transparent;
+  border-left: 4px solid var(--style-color);
+  border-bottom: 4px solid var(--style-color);
+  border-top: 2px solid var(--style-color);
+  border-right: 2px solid var(--style-color);
   color:  var(--white-text-color);
-  border-radius: 0px;
   font-size: 1.30em;
   background: rgba(0, 0, 0, 0.356);
   animation: 3s floaty infinite;
   z-index: 1000;
   cursor: pointer;
   user-select: none;
-  transition: 0.15s;
   font-family: var(--text-font);
   height: 60px;
   width: 370px;
@@ -85,10 +87,8 @@ p::selection{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-.button:hover{
-  background: var(--white-text-color);
-  color: var(--back-main-color);
+  border-radius: 0px;
+  transition: 0.25s;
 }
 .button>div>i{
   color: var(--style-color);

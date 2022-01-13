@@ -52,14 +52,8 @@
                             .project()
                         </span>
                     </div>
-                    <div class="containerGithub">
-                        chess3D
-                    </div>
-                    <div class="containerGithub">s
-                        Vanh Gogh Site
-                    </div>
-                    <div class="containerGithub">
-                        BackEnd Project
+                    <div class="description">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus fuga, reiciendis provident quasi vitae corrupti facilis soluta, nesciunt nam nobis, obcaecati quidem debitis magnam! Iste eligendi sequi ratione nemo nam!
                     </div>
                 </div>
                 <div class="content social">
