@@ -5,8 +5,8 @@
         </a>
         <ul class="menu">
             <li class="hoverable active">.about()</li>
-            <li class="hoverable">.contact()</li>
             <li class="hoverable">.project()</li>
+            <li class="hoverable">.contact()</li>
             <li class="hoverable">.social()</li>
         </ul>
     </div>

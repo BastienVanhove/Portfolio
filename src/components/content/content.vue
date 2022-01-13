@@ -19,12 +19,36 @@
                         </span>
                     </div>
                     <div class="description">
-                        <div class="containerProfileImg">
-                            <img src="../../assets/images/van.jpg">
+                        <div class="containerProfile">
+                            <div class="containerProfileImg">
+                                <img src="../../assets/images/van.jpg">
+                            </div>
+                            <div class="name">
+                                Bastien Vanhove (NONE)
+                            </div>
                         </div>
                         <p class="profileText">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita enim sequi, nam nesciunt excepturi ut corporis eos, quae esse nisi facere voluptas! Id ipsam sunt ad dolorem assumenda distinctio eveniet.
                         </p>
+                    </div>
+                </div>
+                <div class="content project">
+                    <div class="title">
+                        Bastien
+                        <span class="styleColor">
+                            .project()
+                        </span>
+                    </div>
+                    <div class="description">
+                        <p>i like programming chess thing blabla but ...</p>
+                    </div>
+                    <div class="chessContainer">
+                        <div v-for="x in 8"  :key= "x" class="chessLine">
+                            <div v-for="y in 8" :key="y" class="chessCase">
+                                <div v-if="(x + y) % 2 == 0" class="chessUpCase" style="background-color: black"></div>
+                                <div v-else class="chessUpCase" style="background-color: white"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="content contact">
@@ -43,26 +67,6 @@
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sapiente nemo ut assumenda soluta suscipit alias voluptate nihil aliquam rem. Consectetur nemo natus sapiente ipsam dolore illum soluta fuga atque!
                         </p>
-                    </div>
-                </div>
-                <div class="content project">
-                    <div class="title">
-                        Bastien
-                        <span class="styleColor">
-                            .project()
-                        </span>
-                    </div>
-                    <div class="description">
-                        <p>i like programming chess thing blabla but ...</p>
-                        <p>But can you catch the King ?</p>
-                    </div>
-                    <div class="chessContainer">
-                        <div v-for="x in 8"  :key= "x" class="chessLine">
-                            <div v-for="y in 8" :key="y" class="chessCase">
-                                <div v-if="(x + y) % 2 == 0" class="chessUpCase" style="background-color: black"></div>
-                                <div v-else class="chessUpCase" style="background-color: white"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="content social">
@@ -99,25 +103,43 @@
         background: rgba(0, 0, 0, 0.356);
     }
     .socialList{
+        width: 200px;
         display: flex;
         justify-content: space-around;
-        flex-direction: column;
     }
     .socialList>i{
-        margin-top: 0.25em;
         color: var(--style-color);
         font-size: 3em;
     }
+    .containerProfile{
+        margin-top: 25px;
+        height: auto;
+        width: 90%;
+        display: flex;
+    }
     .containerProfileImg{
-        margin-top: 35px;
+        margin-top:auto;
+        margin-bottom: auto;
         border: 5px solid var(--style-color);
         height: 150px;
         width: 150px;
         border-radius: 25px;
-        margin-left: 35px;
+        margin-left: 10px;
         margin-right: auto;
         overflow: hidden;
         user-select: none;
+    }
+    .name{
+        margin-left:auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: var(--style-color);
+        font-size: calc(0.5em + 0.5vw);
+        font-family: var(--title-font);
+        border: 3px solid var(--style-color);
+        padding: 10px;
     }
     .containerGithub{
         margin-top: 10px;
@@ -178,20 +200,6 @@
     .containerProfileImg:hover >img{
         transform: scale(1.5)
     }
-    .containerProfileImg::after{
-        content : 'Click On Van Gogh For Show My GitHub';
-        position : absolute;
-        text-align: center;
-        color: var(--white-text-color);
-        border-radius: 5px;
-        font-size: 0.7em;
-        font-family: var(--text-font);
-        margin-left: 40px;
-        margin-top: 70px;
-        width: calc(100% - 300px);
-        height: 7px;
-        background-color: var(--style-color);
-    }
     .containerProfileImg>img{
         width: 100%;
         transition: 1s;
@@ -214,7 +222,8 @@
     }
     @media screen and (max-width: 900px) {
         .container{
-            margin-top: 20vh;
+            margin-top: 10vh;
+            height: 80vh;
             width: 100%;
             margin-left: 0;
             border: none;

@@ -34,7 +34,7 @@
 
   --back-main-color: #181616;
   --back-second-color: rgb(167, 161, 161);
-  --style-color: #6138c6;
+  --style-color: #7650d4;
   --white-text-color: rgb(212, 201, 201);
   --style-white-color: rgba(212, 197, 197, 0.698);
   --yellow-color: rgb(206, 172, 25);
@@ -217,7 +217,7 @@ p::selection{
         planeFlying()
         const size : number = window.innerHeight * 0.60
         containerContent.scrollTo({
-            top: size*2,
+            top: size,
             behavior: 'smooth'
         })
         window.location = 'https://github.com/BastienVanhove?tab=repositories'
