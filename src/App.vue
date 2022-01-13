@@ -13,7 +13,10 @@
     </div>
     <navbarC/>
     <div class="button">
-      <span v-for="letters in buttonText" :key="letters">{{letters}}</span>
+        <div>
+          <span v-for="letters in buttonText" :key="letters">{{letters}}</span>
+          <i class="fas fa-paper-plane"></i>
+        </div>
     </div>
     <content/>
 </template>
@@ -64,12 +67,11 @@ p::selection{
 .button{
   position: absolute;
   margin-left: 15vw;
-  margin-top: calc(40vh - 55px);
+  margin-top: calc(40vh - 70px);
   border: 3px solid var(--style-color);
   color:  var(--white-text-color);
   border-radius: 0px;
-  padding: 10px;
-  font-size: 1.05em;
+  font-size: 1.30em;
   background: rgba(0, 0, 0, 0.356);
   animation: 3s floaty infinite;
   z-index: 1000;
@@ -77,17 +79,22 @@ p::selection{
   user-select: none;
   transition: 0.15s;
   font-family: var(--text-font);
-}
-.button>span{
-  transition: 0.25s;
+  height: 60px;
+  width: 370px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .button:hover{
   background: var(--white-text-color);
   color: var(--back-main-color);
 }
-.button>span:hover{
+.button>div>i{
   color: var(--style-color);
-  transform: scale(1.25)
+  font-size: 1em;
+  margin-left: 5px;
+  transition: 0.5s;
 }
 @keyframes floaty {
   to{
@@ -166,6 +173,8 @@ p::selection{
       const mouseScale : any = document.querySelector('.mouseScale')
       const mouse : any = document.querySelector('.mouse')
       const button : any = document.querySelector('.button')
+      const containerContent : any = document.querySelector('.container')
+
 
       window.addEventListener('mousemove',(e)=>{
         let x = e.clientX
@@ -180,16 +189,39 @@ p::selection{
         },200)
       })
 
-      let hoverFunction = () =>{
+      const hoverFunction = () =>{
           mouseScale.style.transform = 'scale(1)'
           mouse.style.borderRadius = '10px'
       }
-      let OutFunction = () =>{
+      const OutFunction = () =>{
           mouseScale.style.transform = 'scale(0.65)'
           mouse.style.borderRadius = '0px'
       }
       button.addEventListener('mouseover', hoverFunction)
       button.addEventListener('mouseout', OutFunction)
+
+      const plane : any = document.querySelector('.button>div>i')
+      const planeFlying = () =>{
+        plane.style.transform = 'translate(100px, -55px) rotate(35deg)'
+        setTimeout(()=>{
+          plane.style.opacity = 0
+        },100)
+        setTimeout(()=>{
+          plane.style.transform = 'translate(0px, 0px) rotate(0)'
+        },550)
+        setTimeout(()=>{
+          plane.style.opacity = 1
+        },1000)
+      }
+      button.addEventListener('click',()=>{
+        planeFlying()
+        const size : number = window.innerHeight * 0.60
+        containerContent.scrollTo({
+            top: size*2,
+            behavior: 'smooth'
+        })
+        window.location = 'https://github.com/BastienVanhove?tab=repositories'
+      })
     },
     methods: {
       

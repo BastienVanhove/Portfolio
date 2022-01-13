@@ -223,9 +223,6 @@
         z-index: 1000;
         pointer-events: none;
     }
-    .marginContent{
-        margin-top: 60vh;
-    }
     .about{
         margin-top: 5px;
     }
@@ -244,7 +241,6 @@
     }
     .title>span{
         font-family: var(--text-font);
-
     }
     .description{
         margin-top: 0.8em;
