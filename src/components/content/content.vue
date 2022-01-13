@@ -35,8 +35,14 @@
                         </span>
                     </div>
                     <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ipsa id quam labore odio. Dolor, veniam fugiat, dicta porro quae perferendis repudiandae eveniet autem nam commodi accusantium accusamus reiciendis.
-                        <p>mails : bastienv.capital@gmail.com</p>
+                        <div class="flex mail">
+                            <i class="fas fa-envelope"></i>
+                            <p>mails : bastienv.capital@gmail.com</p>
+                        </div>
+                        <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sapiente nemo ut assumenda soluta suscipit alias voluptate nihil aliquam rem. Consectetur nemo natus sapiente ipsam dolore illum soluta fuga atque!
+                        </p>
                     </div>
                 </div>
                 <div class="content project">
@@ -46,8 +52,14 @@
                             .project()
                         </span>
                     </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam reprehenderit ipsa id quam labore odio. Dolor, veniam fugiat, dicta porro quae perferendis repudiandae eveniet autem nam commodi accusantium accusamus reiciendis.
+                    <div class="containerGithub">
+                        chess3D
+                    </div>
+                    <div class="containerGithub">s
+                        Vanh Gogh Site
+                    </div>
+                    <div class="containerGithub">
+                        BackEnd Project
                     </div>
                 </div>
                 <div class="content social">
@@ -90,6 +102,19 @@
         overflow: hidden;
         user-select: none;
     }
+    .containerGithub{
+        margin-top: 10px;
+        width: 95%;
+        height: 20%;
+        border-radius: 5px;
+        border: 2px solid var(--style-color);
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        color: white;
+        font-size: 1.25em;
+    }
     .containerProfileImg:hover >img{
         transform: scale(1.5)
     }
@@ -111,7 +136,17 @@
         width: 100%;
         transition: 1s;
     }
-
+    .mail{
+    }
+    .mail>i{
+        font-size: 1.25em;
+        color: var(--style-color);
+    }
+    .mail>p{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 10px;
+    }
     .profileText{
         margin-top: 25px;
         margin-left: auto;

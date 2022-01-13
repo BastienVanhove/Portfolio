@@ -13,7 +13,7 @@
     </div>
     <navbarC/>
     <div class="button">
-      I don't care, show me your Projects
+      <span v-for="letters in buttonText" :key="letters">{{letters}}</span>
     </div>
     <content/>
 </template>
@@ -64,7 +64,7 @@ p::selection{
 .button{
   position: absolute;
   margin-left: 15vw;
-  margin-top: calc(40vh - 60px);
+  margin-top: calc(40vh - 55px);
   border: 3px solid var(--style-color);
   color:  var(--white-text-color);
   border-radius: 0px;
@@ -78,8 +78,16 @@ p::selection{
   transition: 0.15s;
   font-family: var(--text-font);
 }
+.button>span{
+  transition: 0.25s;
+}
 .button:hover{
+  background: var(--white-text-color);
+  color: var(--back-main-color);
+}
+.button>span:hover{
   color: var(--style-color);
+  transform: scale(1.25)
 }
 @keyframes floaty {
   to{
@@ -188,6 +196,7 @@ p::selection{
     }, 
     data(){
       return{
+        buttonText : "I don't care, show me your Projects".split(''),
       }
     },
   }
